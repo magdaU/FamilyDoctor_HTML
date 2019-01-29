@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Family Doctor  List Visit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<body>
+
+<div class="jumbotron text-center">
+    <h2>History patient's visit</h2>
+    <form>
+        <div class="input-group">
+            <input type="email" class="form-control" size="50" placeholder="Input visit name you want find" required>
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-danger">Search</button>
+            </div>
+        </div>
+    </form>
+    <table class="table table-hover">
+        <thead>
+        <th>NickName</th>
+        <th>Date Visit</th>
+        <th>Hour Visit</th>
+        <th>Kind of visit</th>
+        <th>Place visit</th>
+        <th>Doctor name</th>
+        <th>Details</th>
+        <th>Visited done or not?</th>
+        <th>Operations</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td align="left">Elsa</td>
+            <td align="left">2019-08-10</td>
+            <td align="left">07:00</td>
+            <td align="left">Laboratory test</td>
+            <td align="left">POZ Zaspa</td>
+            <td align="left">Dr Konderolos</td>
+            <td align="left">TSH, morfology, glucose</td>
+            <td align="left"><input type="checkbox" class="form-check-input" id="checkOnVisitList">
+                <label class="form-check-label" for="checkOnVisitList">Yes</label></td>
+            <td align="left">
+                <button id="save" class="btn btn-default" type="addVisit">Add Visit</button>
+                <button id="clear" class="btn btn-default" type="deleteVisit"> Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
+

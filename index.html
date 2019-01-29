@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Family Doctor </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/boostrap.css">
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavigationBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#myPage">@LIUM</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavigationBar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#aboutApplication">FAMILY DOCTOR</a></li>
+                <li><a href="#listOfPatients">PATIENTS</a></li>
+                <li><a href="#listOfVisit">VISITS</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="aboutApplication" class="container-fluid">
+    <div class="jumbotron text-center">
+        <h1>Family doctor</h1>
+        <p>Application only for private use </p>
+    </div>
+</div>
+
+<div id="listOfPatients" class="container-fluid">
+    <div class="text-center">
+        <h2>List of patients</h2>
+        <h4>Choose patient from the list</h4>
+    </div>
+    <div class="row slideanim">
+        <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Alburnus</h1>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <strong id="fatherFirstName"></strong>
+                    </p>
+                    <p>
+                        <strong id="fatherNickName"> </strong>
+                    </p>
+                    <p><strong>Details patient's visit :: </strong></p>
+                    <strong><a href="./link_Visit.html" title="Details" class="btn btn-danger"> Visit </a></strong>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Alium</h1>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <strong id="motherFirstName"></strong>
+                    </p>
+                    <p>
+                        <strong id="motherNickName"></strong>
+                    </p>
+                    <p><strong>Details patient's visit :: </strong></p>
+                    <strong><a href="./link_Visit.html" title="Details" class="btn btn-danger"> Visit </a></strong>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Boss baby</h1>
+                </div>
+                <div class="panel-body" id="nazwa">
+                    <p>
+                        <strong id="daughterFirstName"></strong>
+                    </p>
+                    <p>
+                        <strong id="daughterNickName"> </strong>
+                    </p>
+                    <p><strong>Details patient's visit :: </strong></p>
+                    <strong><a href="./link_Visit.html" title="Details" class="btn btn-danger"> Visit </a></strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="listOfVisit" class="container-fluid bg-grey">
+    <h2 class="text-center">Visits</h2>
+    <h4 class="text-center">Add new visit for patient</h4>
+    <div class="row">
+        <div class="col-sm-10">
+            <form id="addVisitForm">
+                <div class="col-sm-4">
+                    <p>Choose patient from list <span class="glyphicon glyphicon-user"></span></p>
+                    <form>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" checked>Alium</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">Alburnus</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">Elsa</label>
+                        </div>
+                    </form>
+                </div>
+    <div class="col-sm-7 slideanim">
+        <form>
+            <div class="row">
+                <div class="col-sm-9 form-group">
+                    <p>Choose date  and hour visit<span class="glyphicon glyphicon-calendar"></span></p>
+                    <input type="datetime-local" value="yy-MM-ddThh:mm" class="form-control" name="date" placeholder="Date" required>
+                </div>
+                <div class="col-sm-8 form-group">
+                    <p>Choose place visit <span class="glyphicon glyphicon-home"></span></p>
+                    <input class="form-control" id="place" name="place" placeholder="Place" type="text"
+                           required>
+                </div>
+                <div class="col-sm-8 form-group">
+                    <p>Doctor name <span class="glyphicon glyphicon-plus"></span></p>
+                    <input class="form-control" id="doctorName" name="doctorName" placeholder="Doctor Name"
+                           type="text" required>
+                </div>
+                <div class="col-sm-8 form-group">
+                    <p>Important comments <span class="glyphicon glyphicon-info-sign"></span></p>
+                    <textarea class="form-control" id="comments" name="comments"
+                              placeholder="Important information: telephone, name doctor, kind of research, place, medical indications before research"
+                              rows="8"></textarea><br>
+                </div>
+                <div class="col-sm-12 form-group">
+                    <button id="save" class="btn btn-danger" >Save</button>
+                    <button id="clear" class="btn btn-danger">Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+<footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+</footer>
+</div>
+</body>
+<script src="js/index.js"></script>
+</html>
